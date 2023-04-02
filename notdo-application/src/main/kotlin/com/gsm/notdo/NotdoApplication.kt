@@ -1,4 +1,4 @@
-package com.gms.notdo
+package com.gsm.notdo
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
