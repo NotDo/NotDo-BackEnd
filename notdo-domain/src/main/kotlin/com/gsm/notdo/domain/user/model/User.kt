@@ -1,13 +1,9 @@
-package com.gsm.notdo.user.model
+package com.gsm.notdo.domain.user.model
 
 import java.time.ZonedDateTime
 import java.util.UUID
-import javax.persistence.Entity
-import javax.persistence.Id
 
-@Entity
 data class User(
-        @Id
         val id: UUID,
         val email: String,
         val password: String?,
