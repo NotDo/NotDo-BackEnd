@@ -8,7 +8,7 @@ data class Do(
         val id: Long,
         val content: String,
         val isComplete: Boolean,
-        val type: String,
+        val type: Type,
         val createdAt: ZonedDateTime,
         val updatedAt: ZonedDateTime?,
         val userId: Long
