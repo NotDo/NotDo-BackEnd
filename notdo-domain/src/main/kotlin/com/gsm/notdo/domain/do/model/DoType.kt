@@ -1,6 +1,6 @@
 package com.gsm.notdo.domain.`do`.model
 
-enum class Type(
+enum class DoType(
         val type: String
 ) {
     DO("해야할 일"),

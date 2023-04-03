@@ -1,10 +1,13 @@
-package com.gsm.notdo.domain.`do`.model
+package com.gsm.notdo.persistence.`do`.entity
 
-import com.gsm.notdo.common.annotation.Aggregate
+import com.gsm.notdo.domain.`do`.model.DoType
 import java.time.ZonedDateTime
+import javax.persistence.Entity
+import javax.persistence.Id
 
-@Aggregate
-data class Do(
+@Entity
+data class DoEntity(
+        @Id
         val id: Long,
         val content: String,
         val isComplete: Boolean,
