@@ -12,7 +12,7 @@ data class UserEntity(
         val id: UUID,
         @Column(columnDefinition = "VARCHAR2(255)", nullable = false, unique = true)
         val email: String,
-        @Column(nullable = true)
+        @Column(columnDefinition = "VARCHAR2(255)" ,nullable = true)
         val password: String?,
         @Column(columnDefinition = "VARCHAR2(8)", nullable = false)
         val nickName: String,
