@@ -10,11 +10,11 @@ import javax.persistence.Id
 data class UserEntity(
         @Id
         val id: UUID,
-        @Column(columnDefinition = "VARCHAR(255)", nullable = false, unique = true)
+        @Column(columnDefinition = "VARCHAR2(255)", nullable = false, unique = true)
         val email: String,
         @Column(nullable = true)
         val password: String?,
-        @Column(columnDefinition = "VARCHAR(20)", nullable = false)
+        @Column(columnDefinition = "VARCHAR2(8)", nullable = false)
         val nickName: String,
         val createdAt: ZonedDateTime
 )
