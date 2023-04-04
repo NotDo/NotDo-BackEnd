@@ -6,7 +6,7 @@ import javax.persistence.Entity
 import javax.persistence.Id
 
 @Entity
-data class User(
+data class UserEntity(
         @Id
         val id: UUID,
         val email: String,
