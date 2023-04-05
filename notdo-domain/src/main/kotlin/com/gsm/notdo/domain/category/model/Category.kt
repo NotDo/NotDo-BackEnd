@@ -1,10 +1,11 @@
 package com.gsm.notdo.domain.category.model
 
 import com.gsm.notdo.common.annotation.Aggregate
+import java.util.UUID
 
 @Aggregate
 data class Category(
-        val id: Long,
+        val id: UUID,
         val name: Long,
-        val doId: Long
+        val doId: UUID
 )

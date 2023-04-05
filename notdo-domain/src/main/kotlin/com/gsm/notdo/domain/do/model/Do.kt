@@ -1,15 +1,16 @@
 package com.gsm.notdo.domain.`do`.model
 
 import com.gsm.notdo.common.annotation.Aggregate
-import java.time.ZonedDateTime
+import java.time.LocalDateTime
+import java.util.UUID
 
 @Aggregate
 data class Do(
-        val id: Long,
+        val id: UUID,
         val content: String,
         val isComplete: Boolean,
         val type: DoType,
-        val createdAt: ZonedDateTime,
-        val updatedAt: ZonedDateTime?,
-        val userId: Long
+        val createdAt: LocalDateTime,
+        val updatedAt: LocalDateTime?,
+        val userId: UUID
 )
