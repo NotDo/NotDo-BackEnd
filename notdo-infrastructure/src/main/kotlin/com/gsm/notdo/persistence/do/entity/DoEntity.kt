@@ -18,7 +18,7 @@ data class DoEntity(
         val type: DoType,
         override val createdAt: LocalDateTime,
         @Column(nullable = false, updatable = false, columnDefinition = "DATETIME(6)")
-        val updatedAt: LocalDateTime,
+        val updatedAt: LocalDateTime?,
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(name = "user_id", columnDefinition = "BINARY(16)", nullable = false)
         val userId: UserEntity
