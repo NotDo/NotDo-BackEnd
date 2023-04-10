@@ -28,7 +28,12 @@ jobs:
             distribution: 'temurin'
 
       - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+        run:
+            if [ ${{ runner.os }} == 'Windows' ]; then
+              icacls 'gradlew' /grant "${{ env.USERDOMAIN }}\${{ env.USERNAME }}:(F)"
+            else
+              chmod +x 'gradlew'
+            fi
 
       - name: Build with Gradle
         run: ./gradlew clean build
