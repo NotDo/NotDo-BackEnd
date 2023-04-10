@@ -16,3 +16,7 @@ dependencies {
     runtimeOnly("com.mysql:mysql-connector-j")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 }
+
+tasks.getByName<Jar>("bootJar") {
+    enabled = false
+}
