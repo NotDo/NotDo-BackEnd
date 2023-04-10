@@ -8,14 +8,13 @@ import java.util.UUID
 import javax.persistence.*
 
 @Entity
-@Table(name = "tbl_do")
 data class DoEntity(
         override val id: UUID,
-        @Column(nullable = false)
+        @Column(columnDefinition = "VARCHAR2(50)", nullable = false)
         val content: String,
         val isComplete: Boolean,
         @Enumerated(EnumType.STRING)
-        @Column(nullable = false)
+        @Column(columnDefinition = "VARCHAR2(7)", nullable = false)
         val type: DoType,
         override val createdAt: LocalDateTime,
         @Column(nullable = false, updatable = false, columnDefinition = "DATETIME(6)")

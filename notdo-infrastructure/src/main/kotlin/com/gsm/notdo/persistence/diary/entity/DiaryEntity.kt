@@ -8,16 +8,17 @@ import java.util.UUID
 import javax.persistence.*
 
 @Entity
+@Table(name = "tbl_diary")
 data class DiaryEntity(
         override val id: UUID,
-        @Column(columnDefinition = "VARCHAR2(100)", nullable = false)
+        @Column(nullable = false)
         val title: String,
-        @Column(columnDefinition = "VARCHAR2(1000)", nullable = false)
+        @Column(nullable = false)
         val content: String,
         @Enumerated(EnumType.STRING)
-        @Column(columnDefinition = "VARCHAR2(7)", nullable = false)
+        @Column(nullable = false)
         val mood: Mood,
         @ManyToOne(fetch = FetchType.LAZY)
-        @JoinColumn(name = "user_id", columnDefinition = "BINARY(16)", nullable = false)
+        @JoinColumn(name = "user_id", nullable = false)
         val userId: UserEntity
 ) : BaseEntity(id)
