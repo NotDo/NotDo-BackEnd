@@ -32,7 +32,7 @@ object Dependencies {
     }
 
     object Test {
-        const val SPRING_TEST = "org.springframework.boot:spring-boot-starter-test"
+        const val SPRING_TEST = "org.springframework.boot:spring-boot-starter-test:${Versions.SPRING_TEST}"
         const val MOCKK = "io.mockk:mockk:${Versions.MOCKK}"
         const val KOTEST_RUNNER = "io.kotest:kotest-runner-junit5:${Versions.KOTEST_JUNIT}"
         const val KOTEST_EXTENSION = "io.kotest.extensions:kotest-extensions-spring:${Versions.KOTEST_EXTENSION}"

@@ -5,4 +5,5 @@ object Versions {
     const val KOTEST_EXTENSION = "1.7.2"
     const val KOTEST_ASSERTIONS = "5.4.3"
     const val SPRING_TRANSACTION = "5.3.11"
+    const val SPRING_TEST = "2.6.3"
 }
