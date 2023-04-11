@@ -9,3 +9,7 @@ dependencies {
 
     implementation(Dependencies.Web.SPRING_WEB)
 }
+
+tasks.getByName<Jar>("bootJar") {
+    enabled = false
+}
