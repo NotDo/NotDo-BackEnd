@@ -1,8 +1,8 @@
 plugins {
-    id("org.springframework.boot") version "2.7.5"
-    id("io.spring.dependency-management") version "1.1.0"
-    kotlin("plugin.jpa") version "1.6.21"
-    kotlin("plugin.spring") version "1.7.22"
+    id("org.springframework.boot") version PluginVersion.SPRING_VERSION
+    id("io.spring.dependency-management") version PluginVersion.DEPENDENCY_MANAGER_VERSION
+    kotlin("plugin.jpa") version PluginVersion.JPA_PLUGIN_VERSION
+    kotlin("plugin.spring") version PluginVersion.SPRING_PLUGIN_VERSION
 }
 
 
@@ -10,11 +10,11 @@ dependencies {
     implementation(project(":notdo-domain"))
     implementation(project(":notdo-presentation"))
 
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation(Dependencies.Database.SPRING_DATA_JAP)
+    implementation(Dependencies.Validation.SPRING_VALIDATION)
     implementation(Dependencies.Web.SPRING_WEB)
-    runtimeOnly("com.mysql:mysql-connector-j")
-    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+    runtimeOnly(Dependencies.Database.MYSQL_CONNECTOR)
+    annotationProcessor(Dependencies.Configuration.CONFIGURATION_PROCESSOR)
 }
 
 tasks.getByName<Jar>("bootJar") {
