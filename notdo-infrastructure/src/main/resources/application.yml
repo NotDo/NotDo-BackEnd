@@ -1,15 +1,15 @@
 spring:
   datasource:
-    driver-class-name: ${DB_DRIVER}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-    url: ${DB_URL}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: Bin6487sjc!@
+    url: jdbc:mysql://localhost:3306/notdo?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
   jpa:
     hibernate:
-      ddl-auto: ${JPA_DDL_AUTO}
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
 server:
-  port: ${SERVER_PORT}
+  port: 3000

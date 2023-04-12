@@ -2,24 +2,22 @@ plugins {
     kotlin("jvm") version PluginVersion.JVM_VERSION
 }
 
-
 repositories {
     mavenCentral()
 }
+
 subprojects {
     apply {
         plugin("org.jetbrains.kotlin.jvm")
         version = PluginVersion.JVM_VERSION
     }
-}
-
-dependencies {
-    implementation(Dependencies.Kotlin.KOTLIN_JDK)
-    implementation(Dependencies.Kotlin.KOTLIN_REFLECT)
-
-    implementation(Dependencies.Test.SPRING_TEST)
-    implementation(Dependencies.Test.MOCKK)
-
+    dependencies {
+        implementation(Dependencies.Kotlin.KOTLIN_JDK)
+        implementation(Dependencies.Kotlin.KOTLIN_REFLECT)
+        testImplementation(Dependencies.Test.KOTEST_RUNNER)
+        testImplementation(Dependencies.Test.SPRING_TEST)
+        testImplementation(Dependencies.Test.MOCKK)
+    }
 }
 
 allprojects {
@@ -40,14 +38,8 @@ allprojects {
         test {
             useJUnitPlatform()
         }
-        dependencies {
-            testImplementation(Dependencies.Test.SPRING_TEST)
-            testImplementation(Dependencies.Test.KOTEST_RUNNER)
-            testImplementation(Dependencies.Test.KOTEST_EXTENSION)
-            testImplementation(Dependencies.Test.KOTEST_ASSERTIONS)
-            testImplementation(Dependencies.Test.MOCKK)
-        }
     }
+
     repositories {
         mavenCentral()
     }
