@@ -1,23 +1,18 @@
-package com.gsm.notdo.persistence.diary.entity
+package com.gsm.notdo.persistence.todo.entity
 
-import com.gsm.notdo.domain.diary.model.Mood
 import com.gsm.notdo.persistence.common.BaseEntity
 import com.gsm.notdo.persistence.user.entity.UserEntity
-import java.time.LocalDateTime
 import java.util.UUID
 import javax.persistence.*
 
 @Entity
-@Table(name = "tbl_diary")
-data class DiaryEntity(
+@Table(name = "tbl_todo")
+data class ToDoEntity(
         override val id: UUID,
-        @Column(columnDefinition = "VARCHAR(100)", nullable = false)
-        val title: String,
-        @Column(columnDefinition = "VARCHAR(1000)", nullable = false)
+        @Column(columnDefinition = "VARCHAR(50)", nullable = false)
         val content: String,
-        @Enumerated(EnumType.STRING)
         @Column(nullable = false)
-        val mood: Mood,
+        val isComplete: Boolean,
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(name = "user_id", nullable = false)
         val userId: UserEntity

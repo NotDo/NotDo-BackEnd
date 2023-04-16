@@ -9,6 +9,6 @@ data class User(
         val id: UUID,
         val email: String,
         val password: String?,
-        val nickName: String,
+        val nickname: String,
         val createdAt: LocalDateTime
 )
