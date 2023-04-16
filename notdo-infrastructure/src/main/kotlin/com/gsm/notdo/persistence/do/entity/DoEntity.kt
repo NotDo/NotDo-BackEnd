@@ -1,6 +1,5 @@
 package com.gsm.notdo.persistence.`do`.entity
 
-import com.gsm.notdo.domain.`do`.model.DoType
 import com.gsm.notdo.persistence.common.BaseEntity
 import com.gsm.notdo.persistence.user.entity.UserEntity
 import java.time.LocalDateTime
