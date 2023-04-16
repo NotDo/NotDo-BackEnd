@@ -6,11 +6,11 @@ import org.springframework.data.redis.core.index.Indexed
 import javax.persistence.Id
 
 @RedisHash
-data class RefreshToken(
+data class AuthCodeEntity(
         @Id
         val email: String,
         @Indexed
-        val refreshToken: String,
+        var authCode: String,
         @TimeToLive
-        val timeToLive: Long
+        val expirationTime: Long
 )
