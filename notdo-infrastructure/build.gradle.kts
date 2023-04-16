@@ -13,6 +13,7 @@ dependencies {
     implementation(Dependencies.Database.SPRING_DATA_JAP)
     implementation(Dependencies.Validation.SPRING_VALIDATION)
     implementation(Dependencies.Web.SPRING_WEB)
+    implementation(Dependencies.Database.SPRING_REDIS)
     runtimeOnly(Dependencies.Database.MYSQL_CONNECTOR)
     annotationProcessor(Dependencies.Configuration.CONFIGURATION_PROCESSOR)
 }
