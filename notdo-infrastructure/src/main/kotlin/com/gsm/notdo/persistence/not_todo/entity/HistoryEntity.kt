@@ -6,6 +6,7 @@ import java.util.*
 import javax.persistence.*
 
 @Entity
+@Table(name = "tbl_history")
 data class HistoryEntity(
         override val id: UUID,
         val isComplete: String,

@@ -11,9 +11,9 @@ import javax.persistence.*
 @Table(name = "tbl_diary")
 data class DiaryEntity(
         override val id: UUID,
-        @Column(nullable = false)
+        @Column(columnDefinition = "VARCHAR(100)", nullable = false)
         val title: String,
-        @Column(nullable = false)
+        @Column(columnDefinition = "VARCHAR(1000)", nullable = false)
         val content: String,
         @Enumerated(EnumType.STRING)
         @Column(nullable = false)

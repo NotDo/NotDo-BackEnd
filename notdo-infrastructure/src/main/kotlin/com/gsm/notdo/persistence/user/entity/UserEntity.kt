@@ -10,7 +10,7 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Table(name = "tbl_user")
+@Table(name = "tbl_featuser")
 data class UserEntity(
         override val id: UUID,
         @Column(nullable = false, unique = true)

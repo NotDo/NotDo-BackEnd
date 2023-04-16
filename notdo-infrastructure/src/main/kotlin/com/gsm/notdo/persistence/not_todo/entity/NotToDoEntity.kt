@@ -6,6 +6,7 @@ import java.util.UUID
 import javax.persistence.*
 
 @Entity
+@Table(name = "tbl_not_to_do")
 data class NotToDoEntity(
         override val id: UUID,
         @Column(columnDefinition = "VARCHAR(50)", nullable = false)
