@@ -2,7 +2,7 @@ package com.gsm.notdo.domain.not_todo.model
 
 import java.util.UUID
 
-data class NotTodo(
+data class NotToDo(
         val id: UUID,
         val content: String,
         val isActive : Boolean,
