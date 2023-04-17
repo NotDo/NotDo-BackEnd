@@ -6,7 +6,7 @@ import org.springframework.data.redis.core.index.Indexed
 import javax.persistence.Id
 
 @RedisHash
-data class Authentication(
+data class AuthenticationEntity(
         @Id
         val email: String,
         @Indexed
