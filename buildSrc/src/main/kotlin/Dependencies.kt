@@ -20,6 +20,14 @@ object Dependencies {
         const val CONFIGURATION_PROCESSOR = "org.springframework.boot:spring-boot-configuration-processor"
     }
 
+    object Security {
+        const val SPRING_SECURITY = "org.springframework.boot:spring-boot-starter-security"
+    }
+
+    object Jwt {
+        const val JWT = "io.jsonwebtoken:jjwt:${Versions.JWT_VERSION}"
+    }
+
     object Database {
         const val SPRING_DATA_JAP = "org.springframework.boot:spring-boot-starter-data-jpa"
         const val MYSQL_CONNECTOR = "com.mysql:mysql-connector-j"
