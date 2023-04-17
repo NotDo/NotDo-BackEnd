@@ -7,6 +7,7 @@ plugins {
 
 
 dependencies {
+    implementation(project(":notdo-application"))
     implementation(project(":notdo-domain"))
     implementation(project(":notdo-presentation"))
 
