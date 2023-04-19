@@ -8,7 +8,7 @@ plugins {
 
 dependencies {
     implementation(project(":notdo-application"))
-    implementation(project(":notdo-domain"))
+    implementation(project(":notdo-core"))
     implementation(project(":notdo-presentation"))
 
     implementation(Dependencies.Database.SPRING_DATA_JAP)

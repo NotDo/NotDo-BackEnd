@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":notdo-domain"))
+    implementation(project(":notdo-core"))
 
     implementation(Dependencies.Web.SPRING_WEB)
 }
