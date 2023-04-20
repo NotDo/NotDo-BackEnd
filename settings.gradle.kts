@@ -1,6 +1,6 @@
 rootProject.name = "notdo"
 
-include("notdo-domain")
+include("notdo-core")
 include("notdo-application")
 include("notdo-infrastructure")
 include("notdo-presentation")
