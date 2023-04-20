@@ -1,6 +1,6 @@
 package com.gsm.notdo.persistence.common
 
-import java.time.LocalDateTime
+import java.time.LocalDate
 import java.util.*
 import javax.persistence.Column
 import javax.persistence.MappedSuperclass
@@ -9,5 +9,5 @@ import javax.persistence.MappedSuperclass
 open class BaseEntity (
         id: UUID,
         @Column(nullable = false, updatable = false, columnDefinition = "DATETIME(6)")
-        open val createdAt: LocalDateTime = LocalDateTime.now()
+        open val createdAt: LocalDate = LocalDate.now()
 ) : BaseUUIDEntity(id)
