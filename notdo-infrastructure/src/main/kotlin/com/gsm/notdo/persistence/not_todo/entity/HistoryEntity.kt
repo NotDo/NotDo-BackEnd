@@ -13,7 +13,5 @@ data class HistoryEntity(
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(name = "not_to_do_id", nullable = false)
         val notToDoId: NotToDoEntity,
-        @OneToOne(fetch = FetchType.LAZY)
-        @JoinColumn(name = "category_id", nullable = false)
-        val categoryId: CategoryEntity
+        val categoryId: UUID
 ) : BaseEntity(id)

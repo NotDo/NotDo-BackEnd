@@ -1,6 +1,6 @@
 package com.gsm.notdo.persistence.diary.entity
 
-import com.gsm.notdo.domain.diary.model.Mood
+import com.gsm.notdo.common.enum.Mood
 import com.gsm.notdo.persistence.common.BaseEntity
 import com.gsm.notdo.persistence.user.entity.UserEntity
 import java.util.UUID
