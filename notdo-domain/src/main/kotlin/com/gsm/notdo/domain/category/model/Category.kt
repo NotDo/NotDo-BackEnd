@@ -7,5 +7,5 @@ import java.util.UUID
 data class Category(
         val id: UUID,
         val name: Long,
-        val doId: UUID
+        val userId: UUID
 )

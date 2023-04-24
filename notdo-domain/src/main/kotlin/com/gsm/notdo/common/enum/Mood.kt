@@ -1,7 +1,7 @@
-package com.gsm.notdo.domain.diary.model
+package com.gsm.notdo.common.enum
 
 enum class Mood (
-    val mood: String
+        val mood: String
 ) {
     NORMAL("기본 표정"),
     ANGRY("화난 표정"),
