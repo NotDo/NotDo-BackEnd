@@ -1,4 +1,4 @@
-
+package com.gsm.notdo.domain.diary.model
 enum class Mood (
         val mood: String
 ) {

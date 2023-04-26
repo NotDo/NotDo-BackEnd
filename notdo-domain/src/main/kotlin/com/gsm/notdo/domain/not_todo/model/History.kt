@@ -7,7 +7,7 @@ import java.util.*
 @Aggregate
 data class History(
         val id: UUID,
-        val isComplete: String,
+        val isComplete: Boolean,
         val createdAt : LocalDateTime,
         val notToDoId: UUID,
         val categoryId: UUID
