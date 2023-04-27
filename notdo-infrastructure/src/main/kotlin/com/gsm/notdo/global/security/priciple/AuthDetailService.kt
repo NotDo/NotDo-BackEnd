@@ -9,7 +9,7 @@ import java.util.*
 
 @Service
 class AuthDetailService(
-        private val queryUserPort: QueryUserPort,
+        private val queryUserPort: QueryUserPort
 ) : UserDetailsService {
     override fun loadUserByUsername(username: String?): UserDetails {
         val userId = UUID.fromString(username)

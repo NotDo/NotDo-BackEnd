@@ -11,7 +11,7 @@ dependencies {
     implementation(project(":notdo-domain"))
 
     implementation(Dependencies.Web.SPRING_WEB)
-    implementation(Dependencies.Database.SPRING_DATA_JAP)
+    implementation(Dependencies.Database.SPRING_DATA_JPA)
     implementation(Dependencies.Database.SPRING_REDIS)
     runtimeOnly(Dependencies.Database.MYSQL_CONNECTOR)
 }

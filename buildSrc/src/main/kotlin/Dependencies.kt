@@ -29,7 +29,7 @@ object Dependencies {
     }
 
     object Database {
-        const val SPRING_DATA_JAP = "org.springframework.boot:spring-boot-starter-data-jpa"
+        const val SPRING_DATA_JPA = "org.springframework.boot:spring-boot-starter-data-jpa"
         const val MYSQL_CONNECTOR = "com.mysql:mysql-connector-j"
         const val SPRING_REDIS = "org.springframework.boot:spring-boot-starter-data-redis"
     }
