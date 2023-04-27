@@ -1,6 +1,7 @@
 package com.gsm.notdo.domain.user.output.persistence.user.entity
 
 import com.gsm.notdo.common.base.entity.BaseEntity
+import java.time.LocalDate
 import java.util.UUID
 import javax.persistence.Column
 import javax.persistence.Entity
@@ -15,5 +16,6 @@ data class UserEntity(
         @Column(nullable = true)
         val password: String?,
         @Column(nullable = false)
-        val nickName: String
+        val nickName: String,
+        override val createdAt: LocalDate
 ) : BaseEntity(id)

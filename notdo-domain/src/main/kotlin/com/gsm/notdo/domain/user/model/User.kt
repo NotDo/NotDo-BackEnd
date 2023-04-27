@@ -1,7 +1,7 @@
 package com.gsm.notdo.domain.user.model
 
 import com.gsm.notdo.common.annotation.Aggregate
-import java.time.LocalDateTime
+import java.time.LocalDate
 import java.util.UUID
 
 @Aggregate
@@ -10,5 +10,5 @@ data class User(
         val email: String,
         val password: String?,
         val nickname: String,
-        val createdAt: LocalDateTime
+        val createdAt: LocalDate
 )
