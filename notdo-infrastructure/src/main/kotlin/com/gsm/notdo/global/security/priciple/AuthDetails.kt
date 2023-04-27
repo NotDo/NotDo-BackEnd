@@ -2,9 +2,11 @@ package com.gsm.notdo.global.security.priciple
 
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
+import org.springframework.stereotype.Component
 import java.util.UUID
 
-class AuthDetail(
+@Component
+class AuthDetails(
         private val userId: UUID
 ) : UserDetails {
     override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
