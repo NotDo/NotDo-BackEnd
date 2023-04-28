@@ -5,5 +5,4 @@ object JwtProperties {
     const val PREFIX = "Bearer "
     const val ACCESS = "access"
     const val REFRESH = "refresh"
-    const val AUTHORITY = "authority"
 }

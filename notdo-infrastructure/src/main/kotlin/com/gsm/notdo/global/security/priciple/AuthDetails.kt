@@ -7,9 +7,7 @@ import java.util.UUID
 class AuthDetails(
         private val userId: UUID
 ) : UserDetails {
-    override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
-        TODO("Not yet implemented")
-    }
+    override fun getAuthorities(): MutableCollection<out GrantedAuthority>? = null
 
     override fun getPassword(): String? = null
 
