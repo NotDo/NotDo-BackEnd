@@ -1,10 +1,9 @@
 package com.gsm.notdo.global.security.token
 
 import com.gsm.notdo.domain.auth.port.output.JwtPort
-import com.gsm.notdo.domain.user.input.response.TokenResponse
+import com.gsm.notdo.domain.auth.port.output.dto.TokenDto
 import com.gsm.notdo.global.security.properties.JwtProperties
 import com.gsm.notdo.global.security.properties.SecurityProperties
-import io.jsonwebtoken.Header
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm
 import org.springframework.stereotype.Component
@@ -14,8 +13,8 @@ import java.util.*
 class GenerateTokenAdapter(
         private val securityProperties: SecurityProperties
 ) : JwtPort {
-    override fun receiveToken(userId: UUID): TokenResponse =
-            TokenResponse(
+    override fun receiveToken(userId: UUID): TokenDto =
+            TokenDto(
                     accessToken = generateAccessToken(userId),
                     refreshToken = generateRefreshToken(userId),
                     accessExp = securityProperties.accessExp,
