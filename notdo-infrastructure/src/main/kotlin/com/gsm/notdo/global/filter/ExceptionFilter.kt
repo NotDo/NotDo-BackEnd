@@ -7,6 +7,7 @@ import com.gsm.notdo.global.error.ErrorResponse
 import com.gsm.notdo.global.exception.InternalServerErrorException
 import org.slf4j.LoggerFactory
 import org.springframework.http.MediaType
+import org.springframework.stereotype.Component
 import org.springframework.web.client.HttpServerErrorException.InternalServerError
 import org.springframework.web.filter.OncePerRequestFilter
 import java.nio.charset.StandardCharsets
