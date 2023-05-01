@@ -1,4 +1,4 @@
-package com.gsm.notdo.domain.user.input.response
+package com.gsm.notdo.domain.auth.input.response
 
 data class TokenResponse(
         private val accessToken: String,
