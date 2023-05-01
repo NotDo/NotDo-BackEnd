@@ -11,10 +11,12 @@ dependencies {
     implementation(project(":notdo-domain"))
     implementation(project(":notdo-presentation"))
 
-    implementation(Dependencies.Database.SPRING_DATA_JAP)
+    implementation(Dependencies.Database.SPRING_DATA_JPA)
     implementation(Dependencies.Validation.SPRING_VALIDATION)
     implementation(Dependencies.Web.SPRING_WEB)
     implementation(Dependencies.Database.SPRING_REDIS)
+    implementation(Dependencies.Security.SPRING_SECURITY)
+    implementation(Dependencies.Jwt.JWT)
     runtimeOnly(Dependencies.Database.MYSQL_CONNECTOR)
     annotationProcessor(Dependencies.Configuration.CONFIGURATION_PROCESSOR)
 }
