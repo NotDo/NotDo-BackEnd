@@ -6,9 +6,7 @@ import com.gsm.notdo.domain.auth.port.input.dto.SignUpDto
 import com.gsm.notdo.domain.auth.port.output.dto.TokenDto
 
 @UseCase
-class SignUpService(
-
-) : SignUpUseCase {
+class SignUpService() : SignUpUseCase {
     override fun invoke(dto: SignUpDto): TokenDto {
         TODO("Not yet implemented")
     }
