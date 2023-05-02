@@ -3,7 +3,7 @@ plugins {
     id("io.spring.dependency-management") version PluginVersion.DEPENDENCY_MANAGER_VERSION
     kotlin("plugin.jpa") version PluginVersion.JPA_PLUGIN_VERSION
     kotlin("plugin.spring") version PluginVersion.SPRING_PLUGIN_VERSION
-    kotlin("plugin.allopen") version "1.6.21"
+    kotlin("plugin.allopen") version PluginVersion.ALL_OPEN__PLUGIN_VERSION
 
 }
 

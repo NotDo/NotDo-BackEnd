@@ -1,5 +1,5 @@
 plugins {
-    kotlin("plugin.allopen") version "1.6.21"
+    kotlin("plugin.allopen") version PluginVersion.ALL_OPEN__PLUGIN_VERSION
 }
 dependencies {
     implementation(project(":notdo-domain"))
