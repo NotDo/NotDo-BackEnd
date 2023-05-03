@@ -7,5 +7,5 @@ dependencies {
     implementation(Dependencies.Transaction.SPRING_TRANSACTION)
 }
 allOpen {
-    annotation(AllOpen.USECASE)
+    annotation(AllOpen.SERVICE)
 }
