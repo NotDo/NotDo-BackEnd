@@ -20,4 +20,7 @@ class UserQueryPersistenceAdapter(
     }
     override fun existsUserByUserId(userId: UUID): Boolean =
             userRepository.existsById(userId)
+
+    override fun existUserByEmail(email: String): Boolean =
+            userRepository.existsByEmail(email)
 }
