@@ -17,7 +17,7 @@ class AuthController(
 ) {
     @GetMapping("/signup")
     fun signup(@RequestBody request: SignupRequest): TokenResponse =
-        signUpUseCase(request.toDto(request))
+        signUpUseCase.execute(request.toDto(request))
                 .let { it.toResponse(it) }
 
 }
