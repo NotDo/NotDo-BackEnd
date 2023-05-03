@@ -1,5 +1,6 @@
 package com.gsm.notdo.domain.user.output
 
+import com.gsm.notdo.domain.user.exception.UserNotFoundException
 import com.gsm.notdo.domain.user.model.User
 import com.gsm.notdo.domain.user.output.mapper.toDomain
 import com.gsm.notdo.domain.user.output.persistence.user.repository.UserRepository
@@ -13,8 +14,8 @@ import java.util.*
 class UserQueryPersistenceAdapter(
         private val userRepository: UserRepository
 ) : QueryUserPort {
-    override fun findByUserIdOrNull(userId: UUID): User? {
-        val user = userRepository.findByIdOrNull(userId) ?: return null
+    override fun findByUserIdOrNull(userId: UUID): User {
+        val user = userRepository.findByIdOrNull(userId) ?: throw UserNotFoundException()
         return user.toDomain(user)
     }
     override fun existsUserByUserId(userId: UUID): Boolean =
