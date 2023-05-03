@@ -1,6 +1,6 @@
 package com.gsm.notdo.domain.category.output.persistence.category.entity
 
-import com.gsm.notdo.domain.user.output.persistence.user.entity.UserEntity
+import com.gsm.notdo.domain.user.output.persistence.entity.UserEntity
 import javax.persistence.*
 
 

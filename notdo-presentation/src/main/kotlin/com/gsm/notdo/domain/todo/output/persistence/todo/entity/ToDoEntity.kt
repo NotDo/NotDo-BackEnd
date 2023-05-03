@@ -1,7 +1,7 @@
 package com.gsm.notdo.domain.todo.output.persistence.todo.entity
 
 import com.gsm.notdo.common.base.entity.BaseEntity
-import com.gsm.notdo.domain.user.output.persistence.user.entity.UserEntity
+import com.gsm.notdo.domain.user.output.persistence.entity.UserEntity
 import java.util.UUID
 import javax.persistence.*
 

@@ -1,4 +1,4 @@
-package com.gsm.notdo.domain.user.output.persistence.user.entity
+package com.gsm.notdo.domain.user.output.persistence.entity
 
 import com.gsm.notdo.common.base.entity.BaseEntity
 import java.time.LocalDate

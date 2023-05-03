@@ -1,4 +1,4 @@
-package com.gsm.notdo.domain.auth.output.persistence.auth.entity
+package com.gsm.notdo.domain.auth.output.persistence.entity
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.redis.core.RedisHash

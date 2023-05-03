@@ -1,6 +1,6 @@
-package com.gsm.notdo.domain.user.output.persistence.user.repository
+package com.gsm.notdo.domain.user.output.persistence.repository
 
-import com.gsm.notdo.domain.user.output.persistence.user.entity.UserEntity
+import com.gsm.notdo.domain.user.output.persistence.entity.UserEntity
 import org.springframework.data.repository.CrudRepository
 import java.util.*
 

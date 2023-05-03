@@ -2,7 +2,7 @@ package com.gsm.notdo.domain.diary.output.persistence.diary.entity
 
 import com.gsm.notdo.common.base.entity.BaseEntity
 import com.gsm.notdo.common.enum.Mood
-import com.gsm.notdo.domain.user.output.persistence.user.entity.UserEntity
+import com.gsm.notdo.domain.user.output.persistence.entity.UserEntity
 import java.util.UUID
 import javax.persistence.*
 

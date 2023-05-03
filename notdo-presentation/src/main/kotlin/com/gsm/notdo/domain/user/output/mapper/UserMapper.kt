@@ -1,7 +1,7 @@
 package com.gsm.notdo.domain.user.output.mapper
 
 import com.gsm.notdo.domain.user.model.User
-import com.gsm.notdo.domain.user.output.persistence.user.entity.UserEntity
+import com.gsm.notdo.domain.user.output.persistence.entity.UserEntity
 
 fun User.toEntity(domain: User) : UserEntity =
     UserEntity(
