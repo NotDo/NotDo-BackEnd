@@ -6,4 +6,4 @@ import java.lang.annotation.Target
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-annotation class Service()
+annotation class Service
