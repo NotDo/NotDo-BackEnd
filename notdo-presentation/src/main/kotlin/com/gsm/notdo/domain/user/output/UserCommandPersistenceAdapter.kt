@@ -1,4 +1,4 @@
-package com.gsm.notdo.domain.user.output.adapter
+package com.gsm.notdo.domain.user.output
 
 import com.gsm.notdo.domain.user.model.User
 import com.gsm.notdo.domain.user.output.mapper.toEntity
