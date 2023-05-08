@@ -1,6 +1,8 @@
 package com.gsm.notdo.domain.auth.service
 
 import com.gsm.notdo.common.annotation.Service
+import com.gsm.notdo.domain.auth.model.RefreshToken
+import com.gsm.notdo.domain.auth.port.CommandRefreshTokenPort
 import com.gsm.notdo.domain.auth.port.input.SignUpUseCase
 import com.gsm.notdo.domain.auth.port.input.dto.SignUpDto
 import com.gsm.notdo.domain.auth.port.output.JwtPort
@@ -18,10 +20,21 @@ class SignUpService(
         private val queryUserPort: QueryUserPort,
         private val commandUserPort: CommandUserPort,
         private val passwordEncoderPort: PasswordEncodePort,
+        private val commandRefreshTokenPort: CommandRefreshTokenPort,
         private val jwtPort: JwtPort
 ) : SignUpUseCase {
     override fun execute(dto: SignUpDto): TokenDto {
-        if(queryUserPort.existUserByEmail(dto.email)) {
+        val user = createUser(dto)
+        val token = jwtPort.receiveToken(user.id)
+
+        createRefreshToken(user, token)
+
+        return token
+    }
+    private fun createUser(dto: SignUpDto): User {
+        val isExistUser = queryUserPort.existUserByEmail(dto.email)
+
+        if(isExistUser) {
             throw UserAlreadyExistException()
         }
         val user = User(
@@ -31,7 +44,15 @@ class SignUpService(
                 nickname = dto.nickname,
                 createdAt = LocalDate.now()
         )
-        commandUserPort.create(user)
-        return jwtPort.receiveToken(user.id)
+        return commandUserPort.create(user)
+    }
+
+    private fun createRefreshToken(user: User, token: TokenDto) {
+        val refreshToken = RefreshToken(
+                email = user.email,
+                refreshToken = token.refreshToken,
+                timeToLive = token.refreshExp
+        )
+        commandRefreshTokenPort.save(refreshToken)
     }
 }
