@@ -14,7 +14,6 @@ subprojects {
     dependencies {
         implementation(Dependencies.Kotlin.KOTLIN_JDK)
         implementation(Dependencies.Kotlin.KOTLIN_REFLECT)
-        implementation(Dependencies.Web.SPRING_WEB)
         testImplementation(Dependencies.Test.KOTEST_RUNNER)
         testImplementation(Dependencies.Test.SPRING_TEST)
         testImplementation(Dependencies.Test.MOCKK)
