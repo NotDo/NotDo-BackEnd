@@ -1,6 +1,5 @@
 package com.gsm.notdo.domain.auth.service
 
-import com.gsm.notdo.common.annotation.Service
 import com.gsm.notdo.domain.auth.model.RefreshToken
 import com.gsm.notdo.domain.auth.port.CommandRefreshTokenPort
 import com.gsm.notdo.domain.auth.port.input.SignUpUseCase
@@ -12,6 +11,7 @@ import com.gsm.notdo.domain.user.exception.UserAlreadyExistException
 import com.gsm.notdo.domain.user.model.User
 import com.gsm.notdo.domain.user.port.output.CommandUserPort
 import com.gsm.notdo.domain.user.port.output.QueryUserPort
+import com.gsm.notdo.global.annotation.Service
 import java.time.LocalDate
 import java.util.*
 
