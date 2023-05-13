@@ -4,14 +4,9 @@ plugins {
 
 dependencies {
     implementation(project(":notdo-domain"))
-    implementation(project(":notdo-infrastructure"))
     implementation(Dependencies.Transaction.SPRING_TRANSACTION)
 }
 
 repositories {
     mavenCentral()
-}
-
-allOpen {
-    annotation(AllOpen.SERVICE)
 }

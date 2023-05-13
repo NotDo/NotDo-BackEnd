@@ -11,11 +11,10 @@ import com.gsm.notdo.domain.user.exception.UserAlreadyExistException
 import com.gsm.notdo.domain.user.model.User
 import com.gsm.notdo.domain.user.port.output.CommandUserPort
 import com.gsm.notdo.domain.user.port.output.QueryUserPort
-import com.gsm.notdo.global.annotation.Service
 import java.time.LocalDate
 import java.util.*
 
-@Service
+
 class SignUpService(
         private val queryUserPort: QueryUserPort,
         private val commandUserPort: CommandUserPort,

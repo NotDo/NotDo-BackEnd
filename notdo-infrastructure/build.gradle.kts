@@ -8,7 +8,6 @@ plugins {
 dependencies {
     implementation(project(":notdo-application"))
     implementation(project(":notdo-domain"))
-    implementation(project(":notdo-presentation"))
 
     implementation(Dependencies.Database.SPRING_DATA_JPA)
     implementation(Dependencies.Validation.SPRING_VALIDATION)
@@ -18,6 +17,10 @@ dependencies {
     implementation(Dependencies.Jwt.JWT)
     runtimeOnly(Dependencies.Database.MYSQL_CONNECTOR)
     annotationProcessor(Dependencies.Configuration.CONFIGURATION_PROCESSOR)
+}
+
+allOpen {
+    annotation(AllOpen.SERVICE)
 }
 
 tasks.getByName<Jar>("bootJar") {
