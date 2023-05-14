@@ -1,7 +1,7 @@
 package com.gsm.notdo.domain.auth.service
 
 import com.gsm.notdo.domain.auth.model.RefreshToken
-import com.gsm.notdo.domain.auth.port.CommandRefreshTokenPort
+import com.gsm.notdo.domain.auth.application.port.output.CommandRefreshTokenPort
 import com.gsm.notdo.domain.auth.port.input.SignUpUseCase
 import com.gsm.notdo.domain.auth.port.input.dto.SignUpDto
 import com.gsm.notdo.domain.auth.port.output.JwtPort
