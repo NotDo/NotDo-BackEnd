@@ -33,7 +33,7 @@ out/
 /nbdist/
 /.nb-gradle/
 
-/notdo-infrastructure/src/main/resources/application-dev.yml
+src/main/resources/application-dev.yml
 
 ### VS Code ###
 .vscode/

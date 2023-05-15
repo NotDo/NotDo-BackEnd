@@ -1,7 +1,7 @@
 package com.gsm.notdo.global.security.priciple
 
 import com.gsm.notdo.domain.user.exception.UserNotFoundException
-import com.gsm.notdo.domain.user.port.output.QueryUserPort
+import com.gsm.notdo.domain.user.application.port.output.QueryUserPort
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
 import org.springframework.stereotype.Service

@@ -1,7 +1,7 @@
 package com.gsm.notdo.domain.auth.apdater.output.mappter
 
-import com.gsm.notdo.domain.auth.model.RefreshToken
 import com.gsm.notdo.domain.auth.apdater.output.persistence.entity.RefreshTokenEntity
+import com.gsm.notdo.domain.auth.domain.RefreshToken
 
 fun RefreshToken.toEntity(domain: RefreshToken): RefreshTokenEntity =
         RefreshTokenEntity(

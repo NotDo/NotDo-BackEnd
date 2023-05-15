@@ -25,9 +25,12 @@ repositories {
 dependencies {
     implementation(Dependencies.Web.SPRING_WEB)
     implementation(Dependencies.Database.SPRING_DATA_JPA)
+    implementation(Dependencies.Database.SPRING_REDIS)
     implementation(Dependencies.Validation.SPRING_VALIDATION)
     implementation(Dependencies.Kotlin.KOTLIN_REFLECT)
     implementation(Dependencies.Kotlin.KOTLIN_JDK)
+    implementation(Dependencies.Security.SPRING_SECURITY)
+    implementation(Dependencies.Jwt.JWT)
     runtimeOnly(Dependencies.Database.MYSQL_CONNECTOR)
     testImplementation(Dependencies.Test.SPRING_TEST)
 }
