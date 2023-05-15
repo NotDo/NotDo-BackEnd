@@ -1,6 +1,6 @@
 package com.gsm.notdo.domain.user.adapter.output
 
-import com.gsm.notdo.domain.user.exception.UserNotFoundException
+import com.gsm.notdo.domain.user.domain.exception.UserNotFoundException
 import com.gsm.notdo.domain.user.adapter.output.mapper.toDomain
 import com.gsm.notdo.domain.user.adapter.output.persistence.repository.UserRepository
 import com.gsm.notdo.domain.user.domain.User

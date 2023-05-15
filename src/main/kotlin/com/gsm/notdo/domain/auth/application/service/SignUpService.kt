@@ -8,7 +8,7 @@ import com.gsm.notdo.domain.auth.port.output.JwtPort
 import com.gsm.notdo.domain.auth.port.output.PasswordEncodePort
 import com.gsm.notdo.domain.auth.port.output.dto.TokenDto
 import com.gsm.notdo.domain.user.domain.User
-import com.gsm.notdo.domain.user.exception.UserAlreadyExistException
+import com.gsm.notdo.domain.user.domain.exception.UserAlreadyExistException
 import com.gsm.notdo.domain.user.application.port.output.CommandUserPort
 import com.gsm.notdo.domain.user.application.port.output.QueryUserPort
 import java.time.LocalDate
