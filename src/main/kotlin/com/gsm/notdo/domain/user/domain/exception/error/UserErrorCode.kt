@@ -1,5 +1,7 @@
 package com.gsm.notdo.domain.user.domain.exception.error
 
+import com.gsm.notdo.common.error.ErrorProperty
+
 
 enum class UserErrorCode(
         private val message: String,

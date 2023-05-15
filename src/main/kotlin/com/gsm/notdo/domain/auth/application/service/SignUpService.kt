@@ -1,14 +1,14 @@
-package com.gsm.notdo.domain.auth.service
+package com.gsm.notdo.domain.auth.application.service
 
-import com.gsm.notdo.domain.auth.model.RefreshToken
 import com.gsm.notdo.domain.auth.application.port.output.CommandRefreshTokenPort
+import com.gsm.notdo.domain.auth.domain.RefreshToken
 import com.gsm.notdo.domain.auth.port.input.SignUpUseCase
 import com.gsm.notdo.domain.auth.port.input.dto.SignUpDto
 import com.gsm.notdo.domain.auth.port.output.JwtPort
 import com.gsm.notdo.domain.auth.port.output.PasswordEncodePort
 import com.gsm.notdo.domain.auth.port.output.dto.TokenDto
+import com.gsm.notdo.domain.user.domain.User
 import com.gsm.notdo.domain.user.exception.UserAlreadyExistException
-import com.gsm.notdo.domain.user.model.User
 import com.gsm.notdo.domain.user.port.output.CommandUserPort
 import com.gsm.notdo.domain.user.port.output.QueryUserPort
 import java.time.LocalDate
