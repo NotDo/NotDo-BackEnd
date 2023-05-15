@@ -1,5 +1,4 @@
-package com.gsm.notdo.common.enum
-
+package com.gsm.notdo.domain.diary.domain
 enum class Mood (
         val mood: String
 ) {
