@@ -1,6 +1,6 @@
 package com.gsm.notdo.domain.category.domain
 
-import com.gsm.notdo.common.annotation.Aggregate
+import com.gsm.notdo.global.annotation.Aggregate
 import java.util.UUID
 
 @Aggregate

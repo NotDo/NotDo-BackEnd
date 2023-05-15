@@ -1,4 +1,4 @@
-package com.gsm.notdo.common.error
+package com.gsm.notdo.global.error
 
 abstract class BasicException(
         val errorProperty: ErrorProperty

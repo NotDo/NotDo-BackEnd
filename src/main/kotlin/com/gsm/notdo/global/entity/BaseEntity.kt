@@ -1,4 +1,4 @@
-package com.gsm.notdo.common.base.entity
+package com.gsm.notdo.global.entity
 
 import java.time.LocalDate
 import java.util.*

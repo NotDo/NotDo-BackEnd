@@ -1,6 +1,6 @@
 package com.gsm.notdo.domain.auth.domain
 
-import com.gsm.notdo.common.annotation.Aggregate
+import com.gsm.notdo.global.annotation.Aggregate
 
 @Aggregate
 data class AuthCode(

@@ -1,4 +1,4 @@
-package com.gsm.notdo.common.error
+package com.gsm.notdo.global.error
 
 interface ErrorProperty {
     fun status(): Int

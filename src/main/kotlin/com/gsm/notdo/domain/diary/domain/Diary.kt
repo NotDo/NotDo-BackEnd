@@ -1,6 +1,6 @@
 package com.gsm.notdo.domain.diary.domain
 
-import com.gsm.notdo.common.annotation.Aggregate
+import com.gsm.notdo.global.annotation.Aggregate
 import java.time.LocalDateTime
 import java.util.UUID
 

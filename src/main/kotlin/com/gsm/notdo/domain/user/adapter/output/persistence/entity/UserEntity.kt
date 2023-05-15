@@ -1,6 +1,6 @@
 package com.gsm.notdo.domain.user.adapter.output.persistence.entity
 
-import com.gsm.notdo.common.base.entity.BaseEntity
+import com.gsm.notdo.global.entity.BaseEntity
 import java.time.LocalDate
 import java.util.UUID
 import javax.persistence.Column

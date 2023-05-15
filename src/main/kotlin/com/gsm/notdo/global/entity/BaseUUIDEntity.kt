@@ -1,4 +1,4 @@
-package com.gsm.notdo.common.base.entity
+package com.gsm.notdo.global.entity
 
 import org.hibernate.annotations.GenericGenerator
 import java.util.UUID

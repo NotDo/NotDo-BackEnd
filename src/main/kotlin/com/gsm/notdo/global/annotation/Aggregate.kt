@@ -1,4 +1,4 @@
-package com.gsm.notdo.common.annotation
+package com.gsm.notdo.global.annotation
 
 @Retention(AnnotationRetention.RUNTIME)
 @Target(AnnotationTarget.CLASS)

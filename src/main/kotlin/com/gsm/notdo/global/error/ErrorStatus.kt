@@ -1,4 +1,4 @@
-package com.gsm.notdo.common.error
+package com.gsm.notdo.global.error
 
 object ErrorStatus {
     const val BAD_REQUEST = 400
