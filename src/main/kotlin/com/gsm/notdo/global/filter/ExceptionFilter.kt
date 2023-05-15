@@ -1,17 +1,14 @@
 package com.gsm.notdo.global.filter
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.gsm.notdo.common.error.BasicException
-import com.gsm.notdo.common.error.ErrorProperty
+import com.gsm.notdo.global.error.BasicException
+import com.gsm.notdo.global.error.ErrorProperty
 import com.gsm.notdo.global.error.ErrorResponse
 import com.gsm.notdo.global.exception.InternalServerErrorException
 import org.slf4j.LoggerFactory
 import org.springframework.http.MediaType
-import org.springframework.stereotype.Component
-import org.springframework.web.client.HttpServerErrorException.InternalServerError
 import org.springframework.web.filter.OncePerRequestFilter
 import java.nio.charset.StandardCharsets
-import java.util.logging.Logger
 import javax.servlet.FilterChain
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse

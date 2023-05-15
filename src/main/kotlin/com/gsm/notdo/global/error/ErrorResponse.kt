@@ -1,6 +1,5 @@
 package com.gsm.notdo.global.error
 
-import com.gsm.notdo.common.error.ErrorProperty
 import org.springframework.validation.BindingResult
 
 data class ErrorResponse(

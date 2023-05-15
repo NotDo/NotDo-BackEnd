@@ -1,6 +1,7 @@
 package com.gsm.notdo.global.security.exception.error
 
-import com.gsm.notdo.common.error.ErrorProperty
+import com.gsm.notdo.global.error.ErrorProperty
+
 
 enum class SecurityErrorCode(
         private val status: Int,

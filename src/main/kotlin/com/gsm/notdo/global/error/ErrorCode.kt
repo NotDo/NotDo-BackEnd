@@ -1,7 +1,5 @@
 package com.gsm.notdo.global.error
 
-import com.gsm.notdo.common.error.ErrorProperty
-
 enum class ErrorCode(
         private val status: Int,
         private val message: String
