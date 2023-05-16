@@ -17,6 +17,12 @@ class UserQueryPersistenceAdapter(
         val user = userRepository.findByIdOrNull(userId) ?: throw UserNotFoundException()
         return user.toDomain(user)
     }
+
+    override fun findByEmailOrNull(email: String): User {
+        val user = userRepository.findByEmailOrNull(email) ?: throw UserNotFoundException()
+        return user.toDomain(user)
+    }
+
     override fun existsUserByUserId(userId: UUID): Boolean =
             userRepository.existsById(userId)
 

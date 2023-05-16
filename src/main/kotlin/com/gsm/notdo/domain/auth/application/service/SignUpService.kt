@@ -2,8 +2,8 @@ package com.gsm.notdo.domain.auth.application.service
 
 import com.gsm.notdo.domain.auth.application.port.output.CommandRefreshTokenPort
 import com.gsm.notdo.domain.auth.domain.RefreshToken
-import com.gsm.notdo.domain.auth.port.input.SignUpUseCase
-import com.gsm.notdo.domain.auth.port.input.dto.SignUpDto
+import com.gsm.notdo.domain.auth.application.port.input.SignUpUseCase
+import com.gsm.notdo.domain.auth.application.port.input.dto.SignUpDto
 import com.gsm.notdo.domain.auth.port.output.JwtPort
 import com.gsm.notdo.domain.auth.port.output.PasswordEncodePort
 import com.gsm.notdo.domain.auth.port.output.dto.TokenDto
@@ -11,9 +11,11 @@ import com.gsm.notdo.domain.user.domain.User
 import com.gsm.notdo.domain.user.domain.exception.UserAlreadyExistException
 import com.gsm.notdo.domain.user.application.port.output.CommandUserPort
 import com.gsm.notdo.domain.user.application.port.output.QueryUserPort
+import org.springframework.stereotype.Service
 import java.time.LocalDate
 import java.util.*
 
+@Service
 
 class SignUpService(
         private val queryUserPort: QueryUserPort,
