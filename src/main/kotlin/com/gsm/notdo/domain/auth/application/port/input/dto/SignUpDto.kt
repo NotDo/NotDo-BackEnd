@@ -1,4 +1,4 @@
-package com.gsm.notdo.domain.auth.port.input.dto
+package com.gsm.notdo.domain.auth.application.port.input.dto
 
 data class SignUpDto(
         val email: String,

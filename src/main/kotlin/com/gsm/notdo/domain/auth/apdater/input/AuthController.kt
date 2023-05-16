@@ -2,7 +2,7 @@ package com.gsm.notdo.domain.auth.apdater.input
 
 import com.gsm.notdo.domain.auth.apdater.input.request.SignupRequest
 import com.gsm.notdo.domain.auth.apdater.input.response.TokenResponse
-import com.gsm.notdo.domain.auth.port.input.SignUpUseCase
+import com.gsm.notdo.domain.auth.application.port.input.SignUpUseCase
 import com.gsm.notdo.domain.user.adapter.input.mapper.toDto
 import com.gsm.notdo.domain.user.adapter.input.mapper.toResponse
 import org.springframework.web.bind.annotation.GetMapping
