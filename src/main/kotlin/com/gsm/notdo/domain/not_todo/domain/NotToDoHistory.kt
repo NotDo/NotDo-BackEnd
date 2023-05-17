@@ -7,6 +7,6 @@ import java.util.*
 @Aggregate
 data class NotToDoHistory(
         val id: UUID = UUID(0, 0),
-        val createdAt : LocalDateTime,
+        val createdAt: LocalDateTime,
         val notToDoId: UUID,
 )
