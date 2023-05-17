@@ -7,8 +7,6 @@ import java.util.*
 @Aggregate
 data class NotToDoHistory(
         val id: UUID = UUID(0, 0),
-        val isComplete: Boolean,
         val createdAt : LocalDateTime,
         val notToDoId: UUID,
-        val categoryId: UUID
 )
