@@ -5,8 +5,8 @@ import java.time.LocalDateTime
 import java.util.*
 
 @Aggregate
-data class History(
-        val id: UUID,
+data class NotToDoHistory(
+        val id: UUID = UUID(0, 0),
         val isComplete: Boolean,
         val createdAt : LocalDateTime,
         val notToDoId: UUID,

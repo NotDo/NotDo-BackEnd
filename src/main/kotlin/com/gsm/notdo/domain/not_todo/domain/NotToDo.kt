@@ -5,7 +5,7 @@ import java.util.UUID
 
 @Aggregate
 data class NotToDo(
-        val id: UUID,
+        val id: UUID = UUID(0, 0),
         val content: String,
         val isActive : Boolean,
         val categoryId: UUID
