@@ -7,6 +7,7 @@ import java.util.UUID
 data class NotToDo(
         val id: UUID = UUID(0, 0),
         val content: String,
+        val life: Int,
         val isActive : Boolean,
         val categoryId: UUID
 )
