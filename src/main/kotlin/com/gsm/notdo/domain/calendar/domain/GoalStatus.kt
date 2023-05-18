@@ -1,6 +1,8 @@
 package com.gsm.notdo.domain.calendar.domain
 
-enum class GoalStatus(val description: String) {
+enum class GoalStatus(
+        val description: String
+) {
     NOT_STARTED("아직은 시작하기 전인"),
     PLANNING("이제 막 계획을 세우게 된"),
     PREPARING("아직은 수행 준비 중"),
