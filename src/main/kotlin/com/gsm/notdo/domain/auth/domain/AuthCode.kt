@@ -6,5 +6,4 @@ import com.gsm.notdo.global.annotation.Aggregate
 data class AuthCode(
         val email: String,
         val authCode: String,
-        val expirationTime: Long
 )
