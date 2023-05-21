@@ -1,4 +1,4 @@
-package com.gsm.notdo.global.config
+package com.gsm.notdo.global.redis.config
 
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
