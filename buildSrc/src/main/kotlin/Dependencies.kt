@@ -46,5 +46,10 @@ object Dependencies {
         const val KOTEST_EXTENSION = "io.kotest.extensions:kotest-extensions-spring:${Versions.KOTEST_EXTENSION}"
         const val KOTEST_ASSERTIONS = "io.kotest:kotest-assertions-core:${Versions.KOTEST_ASSERTIONS}"
     }
-
+    object Mail {
+        const val SPRING_MAIL = "org.springframework.boot:spring-boot-starter-mail"
+    }
+    object Thymeleaf {
+        const val SPRING_THYMELEAF = "org.springframework.boot:spring-boot-starter-thymeleaf"
+    }
 }
