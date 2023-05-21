@@ -1,4 +1,4 @@
-package com.gsm.notdo.domain.not_todo.adapter.output.persistence
+package com.gsm.notdo.domain.not_todo.adapter.output.persistence.entity
 
 import com.gsm.notdo.domain.user.adapter.output.persistence.entity.UserEntity
 import com.gsm.notdo.global.entity.BaseEntity
