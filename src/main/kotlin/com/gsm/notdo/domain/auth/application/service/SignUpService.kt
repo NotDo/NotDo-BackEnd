@@ -4,7 +4,7 @@ import com.gsm.notdo.domain.auth.application.port.output.CommandRefreshTokenPort
 import com.gsm.notdo.domain.auth.domain.RefreshToken
 import com.gsm.notdo.domain.auth.application.port.input.SignUpUseCase
 import com.gsm.notdo.domain.auth.application.port.input.dto.SignUpDto
-import com.gsm.notdo.domain.auth.port.output.JwtPort
+import com.gsm.notdo.domain.auth.application.port.output.JwtPort
 import com.gsm.notdo.domain.auth.port.output.PasswordEncodePort
 import com.gsm.notdo.domain.auth.port.output.dto.TokenDto
 import com.gsm.notdo.domain.user.domain.User
