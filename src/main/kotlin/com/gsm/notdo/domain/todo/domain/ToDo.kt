@@ -7,6 +7,6 @@ import java.util.UUID
 data class ToDo(
         val id: UUID,
         val content: String,
-        val isComplete: Boolean,
+        val isActive: Boolean,
         val userId: UUID
 )
