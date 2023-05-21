@@ -1,6 +1,7 @@
 package com.gsm.notdo.domain.auth.application.service
 
 import com.gsm.notdo.domain.auth.application.port.input.SendAuthCodeUseCase
+import com.gsm.notdo.domain.auth.application.port.output.CommandAuthCodePort
 import com.gsm.notdo.domain.auth.domain.AuthCode
 import com.gsm.notdo.global.mail.properties.MailProperties
 import org.springframework.mail.javamail.JavaMailSender
@@ -16,6 +17,7 @@ class SendAuthCodeService(
         private val javaMailSender: JavaMailSender,
         private val mailProperties: MailProperties,
         private val templateEngine: SpringTemplateEngine,
+        private val commandAuthCodePort: CommandAuthCodePort
 ) : SendAuthCodeUseCase {
     override fun execute(email: String) {
         val code = createCode()
@@ -24,7 +26,7 @@ class SendAuthCodeService(
 
 
         val authCode: AuthCode = AuthCode(email, code)
-        authCodeRepository.save(authCode)
+        commandAuthCodePort.save(authCode)
     }
     private fun createMessage(email: String, code: String): MimeMessage {
         val setFrom = mailProperties.host
