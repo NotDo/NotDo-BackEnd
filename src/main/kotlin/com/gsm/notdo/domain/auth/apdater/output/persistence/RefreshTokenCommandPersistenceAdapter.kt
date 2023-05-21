@@ -1,6 +1,6 @@
 package com.gsm.notdo.domain.auth.apdater.output.persistence
 
-import com.gsm.notdo.domain.auth.apdater.output.persistence.mappter.toEntity
+import com.gsm.notdo.domain.auth.apdater.output.persistence.mapper.toEntity
 import com.gsm.notdo.domain.auth.application.port.output.CommandRefreshTokenPort
 import com.gsm.notdo.domain.auth.domain.RefreshToken
 import com.gsm.notdo.domain.auth.apdater.output.persistence.repository.RefreshTokenRepository

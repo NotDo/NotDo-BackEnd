@@ -1,4 +1,4 @@
-package com.gsm.notdo.global.config
+package com.gsm.notdo.global.security.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

@@ -1,6 +1,6 @@
 package com.gsm.notdo.global.security.token
 
-import com.gsm.notdo.domain.auth.port.output.JwtPort
+import com.gsm.notdo.domain.auth.application.port.output.JwtPort
 import com.gsm.notdo.domain.auth.port.output.dto.TokenDto
 import com.gsm.notdo.global.security.properties.JwtProperties
 import com.gsm.notdo.global.security.properties.SecurityProperties
