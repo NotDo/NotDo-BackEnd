@@ -1,6 +1,6 @@
 package com.gsm.notdo.global.mail.config
 
-import org.springframework.beans.factory.annotation.Value
+import com.gsm.notdo.global.mail.properties.MailProperties
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.mail.javamail.JavaMailSender
@@ -8,21 +8,17 @@ import org.springframework.mail.javamail.JavaMailSenderImpl
 
 @Configuration
 class MailConfig(
-        @Value("\${spring.mail.host}")
-        private val mailHost: String,
-        @Value("\${spring.mail.port}")
-        private val mailPort: Int,
-        @Value("\${spring.mail.username}")
-        private val mailUsername: String,
-        @Value("\${spring.mail.password}")
-        private val mailPassword: String
+       private val mailProperties: MailProperties
 ) {
     @Bean
-    fun javaMailSender(): JavaMailSender =
-        JavaMailSenderImpl().apply {
-            host = mailHost
-            port = mailPort
-            username = mailUsername
-            password = mailPassword
+    fun javaMailSender(): JavaMailSender {
+        val (host, port, username, password) = mailProperties
+
+        return JavaMailSenderImpl().apply {
+            this.host = host
+            this.port = port
+            this.username = username
+            this.password = password
         }
+    }
 }
