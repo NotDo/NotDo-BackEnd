@@ -16,6 +16,4 @@ data class CalendarEntity(
         val totalCount: Long,
         @ManyToOne
         val userId: UserEntity
-) : BaseEntity(id) {
-
-}
+) : BaseEntity(id)
