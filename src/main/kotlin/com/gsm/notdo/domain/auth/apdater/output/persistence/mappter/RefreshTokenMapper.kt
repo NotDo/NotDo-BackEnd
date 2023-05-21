@@ -1,4 +1,4 @@
-package com.gsm.notdo.domain.auth.apdater.output.mappter
+package com.gsm.notdo.domain.auth.apdater.output.persistence.mappter
 
 import com.gsm.notdo.domain.auth.apdater.output.persistence.entity.RefreshTokenEntity
 import com.gsm.notdo.domain.auth.domain.RefreshToken

@@ -1,4 +1,4 @@
-package com.gsm.notdo.domain.user.adapter.output.mapper
+package com.gsm.notdo.domain.user.adapter.output.persistence.mapper
 
 import com.gsm.notdo.domain.user.adapter.output.persistence.entity.UserEntity
 import com.gsm.notdo.domain.user.domain.User
