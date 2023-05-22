@@ -1,4 +1,4 @@
-package com.gsm.notdo.domain.auth.apdater.output
+package com.gsm.notdo.domain.auth.apdater.output.persistence
 
 import com.gsm.notdo.domain.auth.apdater.output.persistence.repository.AuthCodeRepository
 import com.gsm.notdo.domain.auth.application.port.output.QueryAuthCodePort

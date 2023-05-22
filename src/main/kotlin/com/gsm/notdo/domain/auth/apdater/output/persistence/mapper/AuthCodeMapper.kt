@@ -10,3 +10,11 @@ fun AuthCode.toEntity(domain: AuthCode): AuthCodeEntity {
             authCode = authCode
     )
 }
+
+fun AuthCodeEntity.toDomain(entity: AuthCodeEntity): AuthCode {
+    val (email, authCode) = entity
+    return AuthCode(
+            email = email,
+            authCode = authCode
+    )
+}
