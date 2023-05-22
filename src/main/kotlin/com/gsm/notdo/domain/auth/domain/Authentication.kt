@@ -9,6 +9,13 @@ data class Authentication(
         val isVerified: Boolean,
         val expirationTime: Long
 ) {
+    constructor(email: String) : this(
+            email = email,
+            attemptCount = 0,
+            isVerified = false,
+            expirationTime = EXPIRED
+    )
+
     companion object {
         const val MAX_ATTEMPT_COUNT = 5L
         const val EXPIRED = 1800L

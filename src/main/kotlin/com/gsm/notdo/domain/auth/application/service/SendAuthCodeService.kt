@@ -29,13 +29,7 @@ class SendAuthCodeService(
 
 
         val authCode = AuthCode(email, code)
-        val authentication = Authentication(
-                email = email,
-                attemptCount = 0,
-                isVerified = false,
-                expirationTime = 900
-        )
-        commandAuthenticationPort.save(authentication)
+        commandAuthenticationPort.save(Authentication(email = email))
         commandAuthCodePort.save(authCode)
     }
     private fun createMessage(email: String, code: String): MimeMessage {
