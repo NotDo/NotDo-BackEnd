@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component
 class AuthCodeQueryPersistenceAdapter(
         private val authCodeRepository: AuthCodeRepository
 ) : QueryAuthCodePort {
-    override fun findByEmail(email: String): AuthCode {
+    override fun findByEmailOrNull(email: String): AuthCode {
         val authCodeEntity = authCodeRepository.findByEmailOrNull(email) ?: throw AuthCodeNotFoundException()
         return authCodeEntity.toDomain(authCodeEntity)
     }

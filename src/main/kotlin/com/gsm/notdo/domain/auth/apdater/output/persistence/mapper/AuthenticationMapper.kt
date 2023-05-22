@@ -12,3 +12,13 @@ fun Authentication.toEntity(domain: Authentication): AuthenticationEntity {
             expirationTime = expirationTime
     )
 }
+
+fun AuthenticationEntity.toDomain(entity: AuthenticationEntity): Authentication {
+    val (email, attemptCount, isVerified, expirationTime) = entity
+    return Authentication(
+            email = email,
+            attemptCount = attemptCount,
+            isVerified = isVerified,
+            expirationTime = expirationTime
+    )
+}
