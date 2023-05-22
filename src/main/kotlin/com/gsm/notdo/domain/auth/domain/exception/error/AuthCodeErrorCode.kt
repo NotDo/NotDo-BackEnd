@@ -6,6 +6,7 @@ enum class AuthCodeErrorCode(
         private val message: String,
         private val status: Int
 ) : ErrorProperty {
+    AUTH_CODE_NOT_MATCH("authCode not match", 400),
     AUTH_CODE_NOT_FOUND("authCode not found", 404);
 
     override fun status(): Int = status
