@@ -6,23 +6,21 @@ import com.gsm.notdo.domain.auth.apdater.input.response.TokenResponse
 import com.gsm.notdo.domain.auth.application.port.input.SendAuthCodeUseCase
 import com.gsm.notdo.domain.auth.application.port.input.SignInUseCase
 import com.gsm.notdo.domain.auth.application.port.input.SignUpUseCase
+import com.gsm.notdo.domain.auth.application.port.input.VerifyMailUserCase
 import com.gsm.notdo.domain.user.adapter.input.mapper.toDto
 import com.gsm.notdo.domain.user.adapter.input.mapper.toResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
+
 
 @RestController
 @RequestMapping("/auth")
 class AuthController(
         private val signUpUseCase: SignUpUseCase,
         private val signInUseCase: SignInUseCase,
-        private val sendAuthCodeUseCase: SendAuthCodeUseCase
+        private val sendAuthCodeUseCase: SendAuthCodeUseCase,
+        private val verifyMailUserCase: VerifyMailUserCase
 ) {
     @GetMapping("/sign-up")
     fun signUp(@RequestBody request: SignupRequest): ResponseEntity<TokenResponse> =
@@ -36,6 +34,11 @@ class AuthController(
     @PostMapping
     fun sendAuthCode(@RequestParam("email")email: String): ResponseEntity<Void> =
             sendAuthCodeUseCase.execute(email)
+                    .run { ResponseEntity.status(HttpStatus.OK).build() }
+
+    @RequestMapping(method = [RequestMethod.HEAD])
+    fun mailVerify(@RequestParam email: String, @RequestParam authKey: String): ResponseEntity<Void> =
+            verifyMailUserCase.execute(email, authKey)
                     .run { ResponseEntity.status(HttpStatus.OK).build() }
 
 }

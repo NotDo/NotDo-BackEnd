@@ -2,7 +2,9 @@ package com.gsm.notdo.domain.auth.application.service
 
 import com.gsm.notdo.domain.auth.application.port.input.SendAuthCodeUseCase
 import com.gsm.notdo.domain.auth.application.port.output.CommandAuthCodePort
+import com.gsm.notdo.domain.auth.application.port.output.CommandAuthenticationPort
 import com.gsm.notdo.domain.auth.domain.AuthCode
+import com.gsm.notdo.domain.auth.domain.Authentication
 import com.gsm.notdo.global.mail.properties.MailProperties
 import org.springframework.mail.javamail.JavaMailSender
 import org.springframework.stereotype.Service
@@ -17,27 +19,30 @@ class SendAuthCodeService(
         private val javaMailSender: JavaMailSender,
         private val mailProperties: MailProperties,
         private val templateEngine: SpringTemplateEngine,
-        private val commandAuthCodePort: CommandAuthCodePort
+        private val commandAuthCodePort: CommandAuthCodePort,
+        private val commandAuthenticationPort: CommandAuthenticationPort
 ) : SendAuthCodeUseCase {
     override fun execute(email: String) {
         val code = createCode()
         val message = createMessage(email, code)
-        javaMailSender.send(message) // 메일 발송
+        javaMailSender.send(message)
 
 
-        val authCode: AuthCode = AuthCode(email, code)
+        val authCode = AuthCode(email, code)
+        commandAuthenticationPort.save(Authentication(email = email))
         commandAuthCodePort.save(authCode)
     }
     private fun createMessage(email: String, code: String): MimeMessage {
         val setFrom = mailProperties.host
         val title = "NotDo 인증 번호"
 
-        val message: MimeMessage = javaMailSender.createMimeMessage().apply {
-            addRecipients(MimeMessage.RecipientType.TO, email) // 보낼 이메일 설정
-            subject = title
-            setFrom(setFrom)
-            setText(setContext(code), "utf-8", "html")
-        }
+        val message: MimeMessage = javaMailSender.createMimeMessage()
+                .apply {
+                    addRecipients(MimeMessage.RecipientType.TO, email)
+                    subject = title
+                    setFrom(setFrom)
+                    setText(setContext(code), "utf-8", "html")
+                }
         return message
     }
     private fun setContext(code: String): String? {

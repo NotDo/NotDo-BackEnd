@@ -29,6 +29,8 @@ class SecurityConfig(
                 .authorizeRequests()
                 .antMatchers(HttpMethod.POST,"/auth/sign-up").permitAll()
                 .antMatchers(HttpMethod.POST,"/auth/sign-in").permitAll()
+                .antMatchers(HttpMethod.POST, "auth").permitAll()
+                .antMatchers(HttpMethod.HEAD, "/auth").permitAll()
                 .anyRequest().authenticated()
         http
                 .apply(FilterConfig(jwtParser, objectMapper))
