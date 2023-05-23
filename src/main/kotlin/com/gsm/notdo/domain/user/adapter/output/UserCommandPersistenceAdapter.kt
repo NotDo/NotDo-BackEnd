@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component
 class UserCommandPersistenceAdapter(
     private val userRepository: UserRepository
 ) : CommandUserPort {
-    override fun create(domain: User): User {
+    override fun save(domain: User): User {
         val userEntity = domain.toEntity(domain)
         val saveEntity = userRepository.save(userEntity)
         return saveEntity.toDomain(saveEntity)

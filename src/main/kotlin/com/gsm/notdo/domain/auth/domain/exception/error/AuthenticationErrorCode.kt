@@ -1,14 +1,13 @@
-package com.gsm.notdo.domain.user.domain.exception.error
+package com.gsm.notdo.domain.auth.domain.exception.error
 
 import com.gsm.notdo.global.error.ErrorProperty
 
-enum class UserErrorCode(
+enum class AuthenticationErrorCode(
         private val message: String,
         private val status: Int
 ) : ErrorProperty {
-    USER_ALREADY_EXIST("user already exist", 400),
-    USER_NOT_VERIFIED("user not verify", 403),
-    USER_NOT_FOUND("user not found", 404);
+    AUTHENTICATION_NOT_FOUND("authentication not found", 404);
+
     override fun status(): Int = status
 
     override fun message(): String = message

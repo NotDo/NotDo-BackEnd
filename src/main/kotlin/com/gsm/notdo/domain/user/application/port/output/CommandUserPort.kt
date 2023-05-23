@@ -4,5 +4,5 @@ import com.gsm.notdo.domain.user.domain.User
 
 
 interface CommandUserPort {
-    fun create(domain: User) : User
+    fun save(domain: User) : User
 }

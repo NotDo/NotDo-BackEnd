@@ -4,5 +4,6 @@ import com.gsm.notdo.domain.auth.apdater.output.persistence.entity.Authenticatio
 import org.springframework.data.repository.CrudRepository
 
 interface AuthenticationRepository : CrudRepository<AuthenticationEntity, String> {
-    fun findByEmailOrNull(email: String): AuthenticationEntity
+    fun findByEmailOrNull(email: String): AuthenticationEntity?
+    fun existsByEmail(email: String): Boolean
 }
