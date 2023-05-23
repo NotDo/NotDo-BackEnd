@@ -15,4 +15,8 @@ class AuthenticationQueryPersistenceAdapter(
         return authenticationEntity.toDomain(authenticationEntity)
     }
 
+    override fun existsByEmail(email: String): Boolean {
+        return authenticationRepository.existsByEmail(email)
+    }
+
 }

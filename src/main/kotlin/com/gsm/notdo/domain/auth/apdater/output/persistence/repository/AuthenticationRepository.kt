@@ -5,4 +5,5 @@ import org.springframework.data.repository.CrudRepository
 
 interface AuthenticationRepository : CrudRepository<AuthenticationEntity, String> {
     fun findByEmailOrNull(email: String): AuthenticationEntity
+    fun existsByEmail(email: String): Boolean
 }
