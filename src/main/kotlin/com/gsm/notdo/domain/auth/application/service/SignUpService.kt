@@ -6,6 +6,8 @@ import com.gsm.notdo.domain.auth.application.port.input.SignUpUseCase
 import com.gsm.notdo.domain.auth.application.port.input.dto.SignUpDto
 import com.gsm.notdo.domain.auth.application.port.output.JwtPort
 import com.gsm.notdo.domain.auth.application.port.output.PasswordEncodePort
+import com.gsm.notdo.domain.auth.application.port.output.QueryAuthenticationPort
+import com.gsm.notdo.domain.auth.domain.exception.AuthenticationNotFoundException
 import com.gsm.notdo.domain.auth.port.output.dto.TokenDto
 import com.gsm.notdo.domain.user.domain.User
 import com.gsm.notdo.domain.user.domain.exception.UserAlreadyExistException
@@ -22,15 +24,23 @@ class SignUpService(
         private val commandUserPort: CommandUserPort,
         private val passwordEncoderPort: PasswordEncodePort,
         private val commandRefreshTokenPort: CommandRefreshTokenPort,
+        private val queryAuthenticationPort: QueryAuthenticationPort,
         private val jwtPort: JwtPort
 ) : SignUpUseCase {
     override fun execute(dto: SignUpDto): TokenDto {
         val user = createUser(dto)
         val token = jwtPort.receiveToken(user.id)
 
+        validateAuthentication(dto.email)
         createRefreshToken(user, token)
 
         return token
+    }
+    private fun validateAuthentication(email: String) {
+        val authentication = queryAuthenticationPort.findByEmailOrNull(email)
+        if(!authentication.isVerified) {
+            throw
+        }
     }
     private fun createUser(dto: SignUpDto): User {
         val isExistUser = queryUserPort.existUserByEmail(dto.email)

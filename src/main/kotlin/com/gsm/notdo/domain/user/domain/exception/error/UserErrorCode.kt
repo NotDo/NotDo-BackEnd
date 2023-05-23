@@ -7,6 +7,7 @@ enum class UserErrorCode(
         private val status: Int
 ) : ErrorProperty {
     USER_ALREADY_EXIST("user already exist", 400),
+    USER_NOT_VERIFIED("user not verify", 403),
     USER_NOT_FOUND("user not found", 404);
     override fun status(): Int = status
 
